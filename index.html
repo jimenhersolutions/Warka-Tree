@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warka Tree - Restaurante Etíope</title>
+    <title>Warka Tree - Ethiopian Restaurant</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
+    <!-- Inter and Playfair Display Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <style>
         /* Custom CSS to use the desired fonts */
@@ -28,7 +28,7 @@
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-2 cursor-pointer" onclick="scrollToSection('home')">
-                <!-- Icono de Hoja (Leaf) en SVG simple -->
+                <!-- Leaf Icon SVG -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-700">
                     <path d="M11 20A7 7 0 0 1 9.8 6.5C15.2 1.8 19 6 19 8c0 2-2 2-3 2c-1.2 0-2.3-0.5-3.3-1.5S10 7.8 10 6.5C10 5.2 10.7 4 11.8 3.5c-4.4 0-7.8 4.2-6.8 9.5c0 0.2-0.1 0.4-0.1 0.6c0 4.2 4 7 8 7z"/>
                     <path d="M12 18s-1.5-2-2-5c-0.5-3 0.2-5 0.5-5.5"/>
@@ -40,37 +40,36 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex gap-8 font-medium" id="desktop-menu">
-                <button onclick="scrollToSection('story')" class="hover:text-amber-600 transition-colors text-white">Nuestra Historia</button>
-                <button onclick="scrollToSection('menu')" class="hover:text-amber-600 transition-colors text-white">Menú</button>
-                <button onclick="scrollToSection('experience')" class="hover:text-amber-600 transition-colors text-white">Experiencia</button>
+                <button onclick="scrollToSection('story')" class="hover:text-amber-600 transition-colors text-white">Our Story</button>
+                <button onclick="scrollToSection('menu')" class="hover:text-amber-600 transition-colors text-white">Menu</button>
+                <button onclick="scrollToSection('experience')" class="hover:text-amber-600 transition-colors text-white">Experience</button>
                 <button 
                     onclick="scrollToSection('contact')"
                     class="px-5 py-2 bg-amber-600 text-white rounded-full hover:bg-amber-700 transition-colors font-bold"
                 >
-                    Reservar Mesa
+                    Book Table
                 </button>
             </div>
 
             <!-- Mobile Menu Button -->
             <button class="md:hidden text-amber-700" onclick="toggleMenu()">
+                <!-- Menu Icon -->
                 <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="4" y1="12" x2="20" y2="12"></line>
-                    <line x1="4" y1="6" x2="20" y2="6"></line>
-                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line>
                 </svg>
+                <!-- Close Icon -->
                 <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu-dropdown" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg py-4 flex flex-col items-center gap-4">
-            <button onclick="scrollToSection('story'); toggleMenu()" class="text-stone-700 text-lg font-medium">Nuestra Historia</button>
-            <button onclick="scrollToSection('menu'); toggleMenu()" class="text-stone-700 text-lg font-medium">Menú</button>
-            <button onclick="scrollToSection('experience'); toggleMenu()" class="text-stone-700 text-lg font-medium">Experiencia</button>
-            <button onclick="scrollToSection('contact'); toggleMenu()" class="text-stone-700 text-lg font-medium">Contacto</button>
+            <button onclick="scrollToSection('story'); toggleMenu()" class="text-stone-700 text-lg font-medium">Our Story</button>
+            <button onclick="scrollToSection('menu'); toggleMenu()" class="text-stone-700 text-lg font-medium">Menu</button>
+            <button onclick="scrollToSection('experience'); toggleMenu()" class="text-stone-700 text-lg font-medium">Experience</button>
+            <button onclick="scrollToSection('contact'); toggleMenu()" class="text-stone-700 text-lg font-medium">Contact</button>
         </div>
     </nav>
 
@@ -81,32 +80,32 @@
             <img 
                 src="https://images.unsplash.com/photo-1505253304499-671c55fb57fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
                 alt="Ethiopian Food Spread" 
-                onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Fondo+de+Comida+Etíope';"
+                onerror="this.onerror=null; this.src='https://placehold.co/1920x1080/000000/FFFFFF?text=Ethiopian+Food+Background';"
                 class="w-full h-full object-cover"
             />
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30"></div>
         </div>
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto text-white">
-            <span class="block text-amber-400 font-medium tracking-widest mb-4 uppercase">El Sabor de Etiopía en Guelph</span>
+            <span class="block text-amber-400 font-medium tracking-widest mb-4 uppercase">Taste of Ethiopia in Guelph</span>
             <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
-                Reúnete Bajo el <br/><span class="text-amber-500">Árbol Warka</span>
+                Gather Under the <br/><span class="text-amber-500">Warka Tree</span>
             </h1>
             <p class="text-xl md:text-2xl mb-10 text-stone-200 font-light">
-                Especias auténticas, comida comunal y la calidez de la hospitalidad de África Oriental.
+                Authentic spices, communal dining, and the warmth of East African hospitality.
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <button 
                     onclick="scrollToSection('menu')"
                     class="px-8 py-3 bg-amber-600 text-white font-bold rounded-full hover:bg-amber-700 transition-all transform hover:scale-105"
                 >
-                    Ver Nuestro Menú
+                    View Our Menu
                 </button>
                 <button 
                     onclick="scrollToSection('contact')"
                     class="px-8 py-3 bg-transparent border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-stone-900 transition-all"
                 >
-                    Visítanos
+                    Visit Us
                 </button>
             </div>
         </div>
@@ -123,7 +122,7 @@
                             id="carousel-image"
                             src="https://images.unsplash.com/photo-1505253304499-671c55fb57fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                             alt="Ethiopian Food Experience 1"
-                            onerror="this.onerror=null; this.src='https://placehold.co/800x500/A16207/FFFFFF?text=Comida+Etíope';"
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x500/A16207/FFFFFF?text=Ethiopian+Food';"
                             class="w-full h-full object-cover transition-all duration-700 ease-in-out transform hover:scale-105"
                         />
                         
@@ -132,12 +131,14 @@
                             onclick="prevImage()"
                             class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
                         >
+                            <!-- Chevron Left Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
                         </button>
                         <button 
                             onclick="nextImage()"
                             class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-sm"
                         >
+                            <!-- Chevron Right Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
                         </button>
 
@@ -149,34 +150,34 @@
                         <!-- Gursha Overlay -->
                         <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-lg hidden md:block z-10 border-l-4 border-amber-600">
                             <p class="font-serif text-2xl text-amber-700 font-bold">"Gursha"</p>
-                            <p class="text-sm text-stone-500">El acto de alimentar a otro<br/> como señal de amor.</p>
+                            <p class="text-sm text-stone-500">The act of feeding one another<br/> as a sign of love.</p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2 mt-10 md:mt-0">
-                    <h2 class="text-amber-700 font-bold tracking-wider uppercase mb-2">Nuestra Historia</h2>
-                    <h3 class="text-4xl font-serif font-bold text-stone-900 mb-6">Más Que Solo una Comida</h3>
+                    <h2 class="text-amber-700 font-bold tracking-wider uppercase mb-2">Our Story</h2>
+                    <h3 class="text-4xl font-serif font-bold text-stone-900 mb-6">More Than Just a Meal</h3>
                     <p class="text-stone-600 mb-6 leading-relaxed text-lg">
-                        En Etiopía, el enorme <strong>Árbol Warka</strong> (Higuera Sicómoro) sirve como un lugar de reunión vital para la comunidad. Los ancianos se encuentran en su sombra para resolver problemas y las familias se reúnen para celebrar.
+                        In Ethiopia, the massive <strong>Warka Tree</strong> (Sycamore Fig) serves as a vital gathering place for the community. Elders meet in its shade to solve problems, and families gather to celebrate.
                     </p>
                     <p class="text-stone-600 mb-8 leading-relaxed text-lg">
-                        Aquí en Guelph, traemos ese mismo espíritu a tu mesa. Servimos auténtica cocina etíope en una fuente compartida de <em>Injera</em> (pan plano de masa madre), animándote a comer con las manos y compartir una comida con tus seres queridos. Desde nuestro <em>Doro Wat</em> cocinado a fuego lento hasta nuestras vibrantes opciones veganas, cada plato cuenta una historia.
+                        Here in Guelph, we bring that same spirit to your table. We serve authentic Ethiopian cuisine on a shared platter of <em>Injera</em> (sourdough flatbread), encouraging you to eat with your hands and share a meal with loved ones. From our slow-cooked <em>Doro Wat</em> to our vibrant vegan options, every dish tells a story.
                     </p>
                     <div class="flex gap-8">
                         <div class="flex flex-col items-center">
                             <!-- Utensils Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 mb-2"><path d="M3 2v7c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V2M7 21v-5M7 21a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2m6 0v-5m0 5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2m6-14v2h2V7M9 7h2v2H9V7zM15 7v2h2V7M15 7h2v2H15V7zM18 11v-5M18 11a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4z"/></svg>
-                            <span class="font-bold text-stone-800">Auténtico</span>
+                            <span class="font-bold text-stone-800">Authentic</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <!-- Leaf Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 mb-2"><path d="M12 22a4 4 0 0 0 4-4c0-2-4-7-4-7s-4 5-4 7a4 4 0 0 0 4 4z"></path><path d="M16 12s-3-4-4-4-4 4-4 4"></path></svg>
-                            <span class="font-bold text-stone-800">Fresco</span>
+                            <span class="font-bold text-stone-800">Fresh</span>
                         </div>
                         <div class="flex flex-col items-center">
                             <!-- Coffee Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-800 mb-2"><path d="M10 2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-4zM6 10a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2M13 10v4h2v-4z"/></svg>
-                            <span class="font-bold text-stone-800">Tradicional</span>
+                            <span class="font-bold text-stone-800">Traditional</span>
                         </div>
                     </div>
                 </div>
@@ -188,19 +189,19 @@
     <section id="menu" class="py-20 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <span class="text-amber-600 font-bold tracking-widest uppercase">Sabores Deliciosos</span>
-                <h2 class="text-4xl font-serif font-bold text-stone-900 mt-2">Nuestro Menú</h2>
+                <span class="text-amber-600 font-bold tracking-widest uppercase">Delicious Flavors</span>
+                <h2 class="text-4xl font-serif font-bold text-stone-900 mt-2">Our Menu</h2>
                 <p class="text-stone-500 mt-4 max-w-2xl mx-auto">
-                    Todos los platos principales se sirven con Injera (Injera de Teff sin gluten disponible bajo petición).
+                    All main courses are served with Injera (gluten-free Teff injera available upon request).
                 </p>
             </div>
 
             <!-- Menu Categories -->
             <div id="menu-categories" class="flex flex-wrap justify-center gap-4 mb-12">
-                <button onclick="setActiveCategory('starters')" id="cat-starters" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Entrantes</button>
-                <button onclick="setActiveCategory('mains')" id="cat-mains" class="px-6 py-2 rounded-full font-medium transition-all bg-amber-700 text-white shadow-lg">Platos de Carne</button>
-                <button onclick="setActiveCategory('vegan')" id="cat-vegan" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Vegano / Vegetariano</button>
-                <button onclick="setActiveCategory('drinks')" id="cat-drinks" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Bebidas y Café</button>
+                <button onclick="setActiveCategory('starters')" id="cat-starters" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Starters</button>
+                <button onclick="setActiveCategory('mains')" id="cat-mains" class="px-6 py-2 rounded-full font-medium transition-all bg-amber-700 text-white shadow-lg">Meat Dishes</button>
+                <button onclick="setActiveCategory('vegan')" id="cat-vegan" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Vegan / Veggie</button>
+                <button onclick="setActiveCategory('drinks')" id="cat-drinks" class="px-6 py-2 rounded-full font-medium transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">Drinks & Coffee</button>
             </div>
 
             <!-- Menu Items Grid -->
@@ -210,7 +211,7 @@
             
             <div class="text-center mt-12">
                 <button class="text-amber-700 font-bold border-b-2 border-amber-700 hover:text-amber-900 hover:border-amber-900 transition-colors pb-1">
-                    Descargar Menú Completo (PDF)
+                    Download Full Menu (PDF)
                 </button>
             </div>
         </div>
@@ -222,16 +223,17 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-amber-400">
-                        La Ceremonia del Café
+                        The Coffee Ceremony
                     </h2>
                     <p class="text-stone-300 mb-6 text-lg">
-                        El café (Bunna) es originario de Etiopía. Nuestra ceremonia tradicional es una señal de amistad y respeto.
+                        Coffee (Bunna) originates from Ethiopia. Our traditional ceremony is a mark of friendship and respect.
                     </p>
                     <p class="text-stone-300 mb-8">
-                        Tostamos granos de café verde frescos justo en tu mesa, llenando el aire con un humo aromático. El café se prepara en una olla de barro (Jebena) y se sirve en tazas pequeñas (Cini). No es solo una bebida; es un momento para relajarse.
+                        We roast fresh green coffee beans right at your table, filling the air with an aromatic smoke. The coffee is brewed in a clay pot (Jebena) and served in small cups (Cini). It's not just a drink; it's a moment to slow down.
                     </p>
                     <button class="flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-bold transition-colors">
-                        Reservar una Ceremonia 
+                        Book a Ceremony 
+                        <!-- Arrow Right Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
                     </button>
                 </div>
@@ -239,15 +241,15 @@
                     <div class="grid grid-cols-2 gap-4">
                         <img 
                             src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/363636/FFFFFF?text=Granos+de+Café';"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/363636/FFFFFF?text=Coffee+Beans';"
                             class="rounded-lg translate-y-8 object-cover h-[300px]" 
-                            alt="Granos de café" 
+                            alt="Coffee beans" 
                         />
                         <img 
                             src="https://images.unsplash.com/photo-1595272551532-613d5a4944d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/363636/FFFFFF?text=Vertido+de+Café';"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/363636/FFFFFF?text=Coffee+Pouring';"
                             class="rounded-lg object-cover h-[300px]" 
-                            alt="Vertido de café" 
+                            alt="Pouring coffee" 
                         />
                     </div>
                 </div>
@@ -261,13 +263,13 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Info -->
                 <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <h3 class="text-2xl font-serif font-bold mb-6 text-amber-800">Visítanos</h3>
+                    <h3 class="text-2xl font-serif font-bold mb-6 text-amber-800">Visit Us</h3>
                     <div class="space-y-4">
                         <div class="flex items-start gap-4">
                             <!-- MapPin Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 shrink-0 mt-1"><path d="M12 21s-8-6.5-8-12a8 8 0 0 1 16 0c0 5.5-8 12-8 12z"/><circle cx="12" cy="10" r="3"/></svg>
                             <div>
-                                <p class="font-bold text-stone-800">Restaurante Warka Tree</p>
+                                <p class="font-bold text-stone-800">Warka Tree Restaurant</p>
                                 <p class="text-stone-600">123 Wyndham St N</p>
                                 <p class="text-stone-600">Guelph, ON N1H 4E9</p>
                             </div>
@@ -281,10 +283,10 @@
                             <!-- Clock Icon -->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600 shrink-0 mt-1"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                             <div>
-                                <p class="text-stone-600"><span class="font-bold">Mar - Jue:</span> 4pm - 9pm</p>
-                                <p class="text-stone-600"><span class="font-bold">Vie - Sáb:</span> 12pm - 10pm</p>
-                                <p class="text-stone-600"><span class="font-bold">Dom:</span> 4pm - 9pm</p>
-                                <p class="text-stone-500 text-sm italic mt-1">Cerrado los Lunes</p>
+                                <p class="text-stone-600"><span class="font-bold">Tue - Thu:</span> 4pm - 9pm</p>
+                                <p class="text-stone-600"><span class="font-bold">Fri - Sat:</span> 12pm - 10pm</p>
+                                <p class="text-stone-600"><span class="font-bold">Sunday:</span> 4pm - 9pm</p>
+                                <p class="text-stone-500 text-sm italic mt-1">Closed Mondays</p>
                             </div>
                         </div>
                     </div>
@@ -294,8 +296,8 @@
                 <div class="bg-stone-300 rounded-xl min-h-[300px] flex items-center justify-center relative overflow-hidden group">
                    <img 
                      src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                     alt="Mapa de Ubicación" 
-                     onerror="this.onerror=null; this.src='https://placehold.co/800x600/CCCCCC/363636?text=Ubicación+en+el+Mapa';"
+                     alt="Location Map" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/800x600/CCCCCC/363636?text=Location+Map';"
                      class="absolute inset-0 w-full h-full object-cover opacity-50 grayscale group-hover:grayscale-0 transition-all"
                    />
                    <a 
@@ -304,25 +306,26 @@
                      rel="noreferrer"
                      class="relative z-10 bg-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-amber-50 text-stone-800 flex items-center gap-2"
                    >
+                     <!-- MapPin Icon -->
                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-8-6.5-8-12a8 8 0 0 1 16 0c0 5.5-8 12-8 12z"/><circle cx="12" cy="10" r="3"/></svg>
-                     Obtener Direcciones
+                     Get Directions
                    </a>
                 </div>
 
                 <!-- Reservation / Social -->
                 <div class="bg-amber-800 text-white p-8 rounded-xl shadow-sm flex flex-col justify-between">
                     <div>
-                        <h3 class="text-2xl font-serif font-bold mb-4">Reservas</h3>
+                        <h3 class="text-2xl font-serif font-bold mb-4">Reservations</h3>
                         <p class="text-amber-100 mb-6">
-                            ¿Planeando un grupo grande o una ceremonia de café especial? Recomendamos reservar con antelación.
+                            Planning a large group or a special coffee ceremony? We recommend booking in advance.
                         </p>
                         <button class="w-full py-3 bg-white text-amber-900 font-bold rounded-lg hover:bg-amber-50 transition-colors">
-                            Reservar Mesa Online
+                            Book a Table Online
                         </button>
                     </div>
                     
                     <div class="mt-8">
-                        <p class="font-medium mb-4 border-t border-amber-700 pt-4">Síguenos</p>
+                        <p class="font-medium mb-4 border-t border-amber-700 pt-4">Follow us</p>
                         <div class="flex gap-4">
                             <a href="#" class="p-2 bg-amber-700 rounded-full hover:bg-amber-600 transition-colors">
                                 <!-- Instagram Icon -->
@@ -341,42 +344,42 @@
 
     <!-- Footer Bar -->
     <footer class="bg-stone-900 text-stone-400 py-6 text-center text-sm">
-        <p>&copy; 2024 Warka Tree Restaurante Etíope. Todos los derechos reservados.</p>
-        <p class="mt-1">Sirviendo con orgullo a la comunidad de Guelph.</p>
+        <p>&copy; 2024 Warka Tree Ethiopian Restaurant. All rights reserved.</p>
+        <p class="mt-1">Proudly serving the Guelph community.</p>
     </footer>
 
     <script>
         // --- DATA ---
         const CAROUSEL_IMAGES = [
-            { url: "https://images.unsplash.com/photo-1505253304499-671c55fb57fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Bandeja Etíope Auténtica (Injera y Wats)" },
-            { url: "https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Estofado Picante (Doro Wat)" },
-            { url: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Preparación de la Ceremonia del Café" },
-            { url: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Especias y Estofados" },
+            { url: "https://images.unsplash.com/photo-1505253304499-671c55fb57fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Authentic Ethiopian Platter (Injera and Wats)" },
+            { url: "https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Spicy Stew (Doro Wat)" },
+            { url: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Coffee Ceremony Preparation" },
+            { url: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", alt: "Spices and Stews" },
         ];
         
         const MENU_ITEMS = {
             starters: [
-                { name: 'Sambusa', price: '4.50', description: 'Empanadas rellenas de lentejas especiadas, cebollas y jalapeños (Vegetariano).' },
-                { name: 'Timatim Fitfit', price: '8.00', description: 'Trozos de injera mezclados con una vinagreta de tomate fresco, cebolla y jalapeño.' },
-                { name: 'Ayib Be Gomen', price: '9.50', description: 'Queso cottage fresco casero mezclado con col rizada finamente picada y especias.' }
+                { name: 'Sambusa', price: '4.50', description: 'Pastry shells filled with spiced lentils, onions, and jalapenos (Vegetarian).' },
+                { name: 'Timatim Fitfit', price: '8.00', description: 'Pieces of injera tossed in a blend of fresh tomatoes, onions, and jalapeno pepper dressing.' },
+                { name: 'Ayib Be Gomen', price: '9.50', description: 'Fresh homemade cottage cheese mixed with finely chopped collard greens and spices.' }
             ],
             mains: [
-                { name: 'Doro Wat', price: '19.00', description: 'El plato nacional. Muslos de pollo a fuego lento en salsa berbere picante, servido con un huevo duro.', spicy: true },
-                { name: 'Kitfo', price: '21.00', description: 'Carne de res magra picada sazonada con mitmita y niter kibbeh (mantequilla especiada). Se sirve crudo, medio o bien cocido.', spicy: true },
-                { name: 'Yebeg Tibs', price: '22.00', description: 'Trozos tiernos de cordero salteados con cebolla, romero y pimientos verdes.' },
-                { name: 'Awaze Tibs', price: '20.00', description: 'Carne de res en cubos salteada en nuestra salsa awaze especial (mezcla de berbere y vino de miel).', spicy: true }
+                { name: 'Doro Wat', price: '19.00', description: 'The national dish. Chicken drumsticks simmered in a spicy berbere sauce, served with a hard-boiled egg.', spicy: true },
+                { name: 'Kitfo', price: '21.00', description: 'Lean minced beef seasoned with mitmita and niter kibbeh (spiced butter). Served raw, medium, or well done.', spicy: true },
+                { name: 'Yebeg Tibs', price: '22.00', description: 'Tender pieces of lamb sautéed with onions, rosemary, and green peppers.' },
+                { name: 'Awaze Tibs', price: '20.00', description: 'Cubed beef sautéed in our special awaze sauce (berbere and honey wine blend).', spicy: true }
             ],
             vegan: [
-                { name: 'The Warka Platter (Beyaynetu)', price: '18.50', description: 'Una combinación de lentejas picantes, guisantes partidos amarillos, col, col rizada y ensalada. Una degustación perfecta.', popular: true },
-                { name: 'Misir Wat', price: '15.00', description: 'Lentejas rojas partidas cocidas a fuego lento en una salsa berbere picante.' },
-                { name: 'Kik Alicha', price: '15.00', description: 'Guisantes partidos amarillos cocidos con cúrcuma, cebolla y ajo (Suave).' },
-                { name: 'Shiro', price: '16.00', description: 'Estofado de garbanzo molido cocido con especias y aceite de oliva.' }
+                { name: 'The Warka Platter (Beyaynetu)', price: '18.50', description: 'A combination of spicy lentils, yellow split peas, cabbage, collard greens, and salad. A perfect sampling.', popular: true },
+                { name: 'Misir Wat', price: '15.00', description: 'Split red lentils simmered in a spicy berbere sauce.' },
+                { name: 'Kik Alicha', price: '15.00', description: 'Yellow split peas cooked with turmeric, onions, and garlic (Mild).' },
+                { name: 'Shiro', price: '16.00', description: 'Ground chickpea stew cooked with spices and olive oil.' }
             ],
             drinks: [
-                { name: 'Traditional Coffee Ceremony', price: '15.00', description: 'Experimenta la tradición completa del tostado de café etíope (Sirve a 2-3 personas).', icon: '☕' },
-                { name: 'Tej (Honey Wine)', price: '9.00', description: 'Vino de miel tradicional casero.' },
-                { name: 'Ethiopian Tea', price: '3.50', description: 'Té negro especiado con canela, cardamomo y clavo.' },
-                { name: 'Mango Juice', price: '4.50', description: 'Pulpa de mango fresco y espesa.' }
+                { name: 'Traditional Coffee Ceremony', price: '15.00', description: 'Experience the full Ethiopian coffee roasting tradition (Serves 2-3 people).', icon: '☕' },
+                { name: 'Tej (Honey Wine)', price: '9.00', description: 'Traditional homemade honey wine.' },
+                { name: 'Ethiopian Tea', price: '3.50', description: 'Black tea spiced with cinnamon, cardamom, and cloves.' },
+                { name: 'Mango Juice', price: '4.50', description: 'Fresh, thick mango pulp.' }
             ]
         };
 
@@ -481,14 +484,14 @@
             items.forEach(item => {
                 let indicators = '';
                 if (item.spicy) {
-                    indicators += '<span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold">Picante</span>';
+                    indicators += '<span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-bold">Spicy</span>';
                 }
                 if (item.popular) {
                     // Star icon in SVG
                     indicators += '<span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full font-bold flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Popular</span>';
                 }
                 if (item.icon) {
-                    indicators += `<div class="mt-2 text-amber-700 flex items-center gap-2 text-sm font-bold">${item.icon} Experiencia Especial</div>`;
+                    indicators += `<div class="mt-2 text-amber-700 flex items-center gap-2 text-sm font-bold">${item.icon} Special Experience</div>`;
                 }
                 
                 const itemHtml = `
